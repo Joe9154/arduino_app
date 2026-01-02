@@ -2,6 +2,7 @@
 
 A visual block-based programming environment for Arduino.
 
+![Arduino Block IDE Demo](arduinoapp/showcase.gif)
 
 **Key Features:**
 - 🧩 Drag-and-drop block programming
