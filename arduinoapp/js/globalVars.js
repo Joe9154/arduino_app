@@ -1,0 +1,10 @@
+canvasContainer = document.getElementById('canvas-container');
+mainSVG = document.getElementById('main-svg');
+compiledCode = "";
+blockLibrary = new BlockLibrary();
+contextMenuElement = document.getElementById('context-menu');
+contextMenuOpened = false;
+isPanning = false;
+panStartX = 0;
+panStartY = 0;
+zoomLevel = 1;

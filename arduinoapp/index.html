@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arduino IDE</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div id="canvas-container">
+    <svg id="main-svg">
+      <path id="wire-path-for-connecting" stroke="black" stroke-width="2" fill="none" stroke-linecap="round" />
+    </svg>
+    <div class="container"></div>
+  </div>
+
+  <div id="toolbar">
+    <button id="compile-button" onclick="compileCode(true)">Print
+      Code</button>
+    <button id="compile-button" onclick="compileCode()">Compile</button>
+    <button onclick="uploadToArduino(compiledCode)">Upload to Arduino</button>
+  </div>
+  <div id="context-menu" class="context-menu"></div>
+
+
+
+  <script src="js/block.js"></script>
+  <script src="js/blockLibrary.js"></script>
+  <script src="js/wires.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/uploadToBoard.js"></script>
+  <script src="js/compileCode.js"></script>
+  <script src="js/globalVars.js"></script>
+  <script src="js/myCanvas.js"></script>
+  <script>
+    // let greenLEDPin = 10;
+    // let yellowLEDPin = 9;
+    // let redLEDPin = 8;
+
+
+    let startBlock = blockLibrary.addBlock("createStartBlock", 20, 70);
+    // let getValueBlock = blockLibrary.addBlock("createGetValueBlock", 40, 400, "A0");
+    // let repeatForeverBlock = blockLibrary.addBlock("createRepeatForeverBlock", 350, 200);
+    // let compareBlock = blockLibrary.addBlock("createCompareBlock", 300, 600, "<");
+    // let ifBlock = blockLibrary.addBlock("createIfBlock", 600, 500);
+    // let numberValueBlock = blockLibrary.addBlock("createNumberValueBlock", 50, 700, 600);
+    // let turnOnRedLED = blockLibrary.addBlock("createTurnOnPinBlock", 850, 630, redLEDPin);
+    // // let turnOffRedLED = blockLibrary.addBlock("createTurnOffPinBlock", 850, 800, "8");
+    // let turnOnGreenLED = blockLibrary.addBlock("createTurnOnPinBlock", 250, 50, greenLEDPin);
+    // let turnOffGreenLED = blockLibrary.addBlock("createTurnOffPinBlock", 850, 170, greenLEDPin);
+    // let turnOnYellowLED = blockLibrary.addBlock("createTurnOnPinBlock", 850, 280, yellowLEDPin);
+    // let turnOffYellowLED = blockLibrary.addBlock("createTurnOffPinBlock", 850, 520, yellowLEDPin);
+    // let delayBlock = blockLibrary.addBlock("createDelayBlock", 850, 50, 1000);
+    // let delayBlock2 = blockLibrary.addBlock("createDelayBlock", 850, 400, 2000);
+    // let delayBlock3 = blockLibrary.addBlock("createDelayBlock", 850, 750, 3000);
+
+    // startBlock.outputs[0].connectTo(turnOnGreenLED.inputs[0]);
+    // turnOnGreenLED.outputs[0].connectTo(repeatForeverBlock.inputs[0]);
+    // repeatForeverBlock.inputs[2].connectTo(ifBlock.inputs[0]);
+    // getValueBlock.outputs[0].connectTo(compareBlock.inputs[0]);
+    // numberValueBlock.outputs[0].connectTo(compareBlock.inputs[2]);
+    // ifBlock.inputs[1].connectTo(compareBlock.outputs[0]);
+    // delayBlock.inputs[0].connectTo(ifBlock.outputs[0]);
+    // // turn off green
+    // delayBlock.outputs[0].connectTo(turnOffGreenLED.inputs[0]);
+    // // turn on yellow
+    // turnOffGreenLED.outputs[0].connectTo(turnOnYellowLED.inputs[0]);
+    // // wait 1 sec
+    // turnOnYellowLED.outputs[0].connectTo(delayBlock2.inputs[0]);
+    // // turn off yellow
+    // delayBlock2.outputs[0].connectTo(turnOffYellowLED.inputs[0]);
+    // // turn on red
+    // turnOffYellowLED.outputs[0].connectTo(turnOnRedLED.inputs[0]);
+    // // wait 3 sec
+    // turnOnRedLED.outputs[0].connectTo(delayBlock3.inputs[0]);
+
+
+
+    redrawWires();
+    initContextMenu();
+  </script>
+</body>
+
+</html>
